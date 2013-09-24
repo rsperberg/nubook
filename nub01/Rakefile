@@ -20,4 +20,5 @@ Motion::Project::App.setup do |app|
   app.deployment_target = "6.1"
   app.detect_dependencies = false
   app.version = "0.1"
+  app.info_plist['UIStatusBarStyle'] = 'UIStatusBarStyleBlackTranslucent'
 end
