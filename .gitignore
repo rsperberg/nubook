@@ -1,0 +1,24 @@
+# Files I've generated locally or copied from elsewhere but don't want on Github
+########################################
+book-main.css
+book-bgd.jpg
+novel-example.html
+page-turn.png
+single-left.jpg
+single-right.jpg
+sprite.png
+wood-bgd.jpg
+
+# Folders
+########
+unused
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
