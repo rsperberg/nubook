@@ -1,0 +1,66 @@
+new sizes are:
+ 
+App Icons:
+60x60       iPhone Non-Retina
+120x120   iPhone Retina
+76x76       iPad Non-Retina
+152x152   iPad Retina
+ 
+Spotlight:
+80x80      iPhone Retina
+40x40      iPad Non-Retina
+80x80      iPad Retina
+ 
+Settings:
+58x58     iPhone Retina
+29x29     iPad Non-Retina
+58x58     iPad Retina
+
+
+Icon-Small.png    29x29
+Icon-Small@2x.png  58x58
+Icon-Small-50.png  50x50
+Icon-Small-50@2x.png 100x100
+Icon.png   57x57
+Icon@2x.png 114x114
+Icon-72.png   72x72
+Icon-144.png  144x144
+ 
+No differences there, just add:
+ 
+Icon-60.png   60x60
+Icon-60@2x.png  120x120
+Icon-76.png   76x76
+Icon-76@2x.png  152x152
+ 
+And it should take care of you.
+
+
+==========
+
+"Icon-512.png",        -- 512x512
+"Icon-57.png",         -- App Icon iPhone Non-Retina (iOS 6.1 and prior)
+"Icon-114.png",       -- App Icon iPhone Retina (iOS 6.1 and prior)
+"Icon-72.png",        -- App Icon iPad Non-Retina (iOS 6.1 and prior)
+"Icon-144.png",      -- App Icon iPad Retina (iOS 6.1 and prior)
+"Icon-40.png",        -- Spotlight iPad Retina (iOS 6.1 and prior)
+"Icon-50.png",        -- Spotlight iPad Non-Retina (iOS 6.1 and prior)
+"Icon-100.png",      -- Spotlight iPad Retina (iOS 6.1 and prior)
+ 
+"Icon-60.png",       -- App Icon iPhone Non-Retina [edited]
+"Icon-76.png",       -- App Icon iPad Non-Retina
+"Icon-120.png",      -- App Icon iPhone Retina
+"Icon-152.png",      -- App Icon iPad Retina
+"Icon-80.png",        -- Spotlight iPhone & iPad Retina
+"Icon-29.png",       -- Settings iPhone & iPad Non-Retina
+"Icon-58.png",       -- Settings iPhone Retina & iPad Retina (iOS 6.1 and prior)
+                
+"Icon.png",                    -- 57x57
+"Icon@2x.png",             -- 114x114
+"Icon-iPad.png",            -- 72x72
+"Icon-iPad@2x.png",      -- 144x144
+"Icon-Small-50.png",      -- 50x50
+"Icon-Small-50@2x.png",  -- 100x100
+"Icon-Small.png",              -- 29x29
+"Icon-Small@2x.png"        -- 58x58
+

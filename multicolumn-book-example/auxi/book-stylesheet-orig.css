@@ -1,0 +1,396 @@
+/*------------------------------------------------------------------
+[CSS3 Stylesheet]
+
+Project: CSS3 Design Contest
+Last change: 19.06.2010 [updated stylesheet compatibility, pc]
+Designed by: Peter Craddock
+Works in browsers: FF 3.5+, Opera 10.5+, Safari 4+, Google Chrome 4.0+, IE 9+. Note: Opera & IE use a Javascript implementation of CSS3 multi-columns. See respective CSS files (multicolumn.css for Opera, ie_multicolumn.css for IE), which complement this stylesheet.
+-------------------------------------------------------------------*/
+
+html, body{
+    padding:0;
+    margin:0;
+}
+body {
+    font-family: Sabon,Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+    font-size: 76.5%;
+    min-width: 914px;
+}
+
+/* Layout */
+
+
+#containertwo {
+    width: 890px;
+    height: 284px;
+    margin:auto;
+    margin-top: 0;
+    clear:both;
+    display: block;
+    position: relative;
+}
+#sublayout {
+    width: 864px;
+    height: 614px;
+    margin: 9px 13px 0 13px;
+    clear:both;
+    display: block;
+    position: absolute;
+    border: 1px solid #ccc;
+    box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.45);
+    -webkit-box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.45);
+    -moz-box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.45);
+    z-index: 1;
+}
+#subcontainer {
+    width: 864px;
+    height: 614px;
+    margin: 9px 13px 0 13px;
+    clear:both;
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+#subcontainertwo {
+    width: 864px;
+    height: 284px;
+    margin: 9px 13px 0 13px;
+    clear:both;
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+#article {
+    position: absolute;
+    top: 81px;
+    left: 62px;
+    text-align: justify;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-shadow:#EEE 1px 1px 1px; /* text shadow is a bonus, but it adds a more book-like feel to the serif typeface */
+    z-index: 10;
+    opacity: 1; /* for the animation */
+}
+#articletwo {
+    position: absolute;
+    top: 0;
+    left: 62px;
+    text-align: justify;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-shadow:#EEE 1px 1px 1px; /* text shadow is a bonus, but it adds a more book-like feel to the serif typeface */
+    z-index: 10;
+    opacity: 1; /* for the animation */
+}
+
+
+.one {
+    height: 435px; /* height of the columns + padding-top */
+    width: 740px; /* width of the visible section of text (= two columns + 1 column gap) */
+    overflow: hidden; /* to prevent overflowing content from appearing */
+    margin: 0;
+}
+#contenttwo {
+    height: 215px; /* height of the columns + padding-top */
+}
+#columniser {
+    height: 435px; /* - see above */
+    width: 740px; /* - see above */
+    overflow: visible;
+    /* this being the DIV we'll move on non-IE browsers, we want it to show all of its contents */
+    /* so when we slide it, the new columns will be visible */
+    margin: 0;
+}
+#columnisertwo {
+    height: 215px; /* - see above */
+    width: 740px; /* - see above */
+    overflow: visible;
+    /* this being the DIV we'll move on non-IE browsers, we want it to show all of its contents */
+    /* so when we slide it, the new columns will be visible */
+    margin: 0;
+}
+.two {
+    column-count: auto;
+    column-width: 330px;
+    column-gap: 80px;
+    -webkit-column-count: auto;
+    -webkit-column-width: 330px;
+    -webkit-column-gap: 80px;
+    -moz-column-count: auto;
+    -moz-column-width: 330px;
+    -moz-column-gap: 80px;
+    height: 430px;
+    overflow: visible; /* necessary here */
+    display: block;
+    padding: 0;
+    padding-top: 4px;
+}
+#columnified {
+    margin-left: 0;
+    width: auto;    
+}
+#columnifiedtwo {
+    margin-left: 0;
+    height: 210px;
+    width: auto;
+}
+
+/* Page separator */
+
+.pageseparator {
+    position: absolute;
+    top: 0;
+    height: 616px;
+    left: 432px;
+    width: 0; /* nbsp in HTML necessary for Opera to show the DIV; width:0 necessary to remove effect of nbsp */
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+    .pageseparator:before {
+        /* Small gradient for the area where the two columns meet */
+        content:"\00a0";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -30px;
+        width: 30px;
+        background: -webkit-gradient(linear, right top, left top, from(rgba(150,150,150,0.2)), to(rgba(150,150,150,0)));
+        background: -moz-linear-gradient(right,  rgba(150,150,150,0.2),  rgba(150,150,150,0));
+    }
+    .pageseparator:after {
+        /* Small gradient for the area where the two columns meet */
+        content:"\00a0";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0px;
+        width: 30px;
+        background: -webkit-gradient(linear, left top, right top, from(rgba(150,150,150,0.2)), to(rgba(150,150,150,0)));
+        background: -moz-linear-gradient(left,  rgba(150,150,150,0.2),  rgba(150,150,150,0));
+    }
+    
+
+/* Page turn section */
+
+#nav {
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 10;
+    opacity: 1;
+    /* By setting 'overflow:hidden', we can hide any box-shadows that appear outside of the book */
+    /* Otherwise, they would increase the intensity of certain areas of the box-shadows surrounding the book */
+}
+#navtwo {
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 10;
+    opacity: 1;
+    /* By setting 'overflow:hidden', we can hide any box-shadows that appear outside of the book */
+    /* Otherwise, they would increase the intensity of certain areas of the box-shadows surrounding the book */
+}
+
+.arrows {
+    list-style: none;
+    font-size: 1.3em;
+    font-style: italic;
+}
+    .arrows a {
+        display: block;
+        text-decoration: none;
+        overflow: hidden;
+        outline: none;
+        border: none;
+    }
+        .arrows a span {
+            display: block;
+            padding: 40px 0px 27px 0px;
+        }
+            .arrows #previous a span {
+                padding-left: 75px;
+            }
+            .arrows #next a span {
+                padding-right: 75px;
+            }
+            .arrows #previoustwo a span {
+                padding-left: 75px;
+            }
+            .arrows #nexttwo a span {
+                padding-right: 75px;
+            }
+    .arrows li {
+        position: absolute;
+        display: block;
+    }
+    #previous {
+        visibility: hidden; /* does not appear on the first page, later shows via Javascript */
+        left: 0;
+        text-align: left;
+    }
+    #next {
+        right: 0;
+        text-align: right;
+    }
+    #previoustwo {
+        visibility: hidden; /* does not appear on the first page, later shows via Javascript */
+        left: 0;
+        text-align: left;
+    }
+    #nexttwo {
+        right: 0;
+        text-align: right;
+    }
+
+#flip-right,#flip-left
+{
+    position: absolute;
+    top: -40px;
+    width: 432px; /* page width */
+    height: 664px; /* page height + 50 */
+    overflow: hidden;
+    z-index: 3;
+}
+    #flip-right {
+        left: 13px;
+/*      display: none; */
+        padding: 0px 0px 0px 432px; /* page width + border width */
+    }
+    #flip-left {
+        right: 13px;
+        display: none;
+        padding: 0px 432px 0px 0px;
+/*      background: rgba(0,0,0,0.8); */
+    }
+#right1,#left1,#right2 > div,#left2 > div,#right2 > div > div,#left2 > div > div
+{
+    -webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+    -moz-transition-property: -moz-transform, -moz-transform-origin;
+    -o-transition-property: -o-transform, -o-transform-origin;
+    transition-property: transform, transform-origin;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+#right1,#right2 > div,#right2 > div > div,#left2 > div > div {
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+#right1,#left1
+{
+    position: absolute;
+}   
+    #right1 {
+        -webkit-transform: translate(-216px, 0) rotate(32deg);
+        -moz-transform: translate(-216px, 0) rotate(32deg);
+        -o-transform: translate(-216px, 0) rotate(32deg);
+        transform: translate(-216px, 0) rotate(32deg);
+    }
+    #left1 {
+        -webkit-transform-origin: 864px 0; /* page width x 2 */
+        -moz-transform-origin: 864px 0;
+        -o-transform-origin: 864px 0;
+        transform-origin: 864px 0;
+        -webkit-transform: translate(-216px, 0) rotate(-32deg);
+        -moz-transform: translate(-216px, 0) rotate(-32deg);
+        -o-transform: translate(-216px, 0) rotate(-32deg);
+        transform: translate(-216px, 0) rotate(-32deg);
+    }
+#right2,#left2
+{
+    width: 864px; /* page width x 2 */
+    height: 1228px; /* page height x 2 */
+    overflow: hidden;
+}
+#right2 > div,#left2 > div
+{
+    -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+    -o-box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+    width: 432px;
+    height: 614px;
+    overflow: hidden;
+}
+    #right2 > div {
+        -webkit-transform: translate(1152px, -302px) rotate(32deg); /* translate-x = width * 8/3 ; translate-y = (height / 2) - 5 */
+        -moz-transform: translate(1152px, -302px) rotate(32deg);
+        -o-transform: translate(1152px, -302px) rotate(32deg);
+        transform: translate(1152px, -302px) rotate(32deg);
+        background: #FFF;
+    }
+    #left2 > div {
+        -webkit-transform: translate(-720px, -302px) rotate(-32deg); /* translate-x = (right2>div translate-x) - page-width */
+        -moz-transform: translate(-720px, -302px) rotate(-32deg);
+        -o-transform: translate(-720px, -302px) rotate(-32deg);
+        transform: translate(-720px, -302px) rotate(-32deg);
+        -webkit-transform-origin: 432px 0;
+        -moz-transform-origin: 432px 0;
+        -o-transform-origin: 432px 0;
+        transform-origin: 432px 0;
+        background: #FFF;
+    }
+#right2 > div > div,#left2 > div > div
+{
+    height: 614px;
+    width: 30px;
+}
+    #right2 > div > div {
+        -webkit-transform: translate(-648px, 194px) rotate(-32deg); /* translate-x = width * 1.5 ; translate-y = (height / 3) - 10 */
+        -moz-transform: translate(-648px, 194px) rotate(-32deg);
+        -o-transform: translate(-648px, 194px) rotate(-32deg);
+        transform: translate(-648px, 194px) rotate(-32deg);
+        float: right;
+        background: -webkit-gradient(linear, right top, left top, from(rgba(150,150,150,0.2)), to(rgba(150,150,150,0)));
+        background: -moz-linear-gradient(right,  rgba(150,150,150,0.2),  rgba(150,150,150,0));
+    }
+    #left2 > div > div {
+        -webkit-transform: translate(648px, 194px) rotate(32deg);
+        -moz-transform: translate(648px, 194px) rotate(32deg);
+        -o-transform: translate(648px, 194px) rotate(32deg);
+        transform: translate(648px, 194px) rotate(32deg);
+        float: left;
+        background: -webkit-gradient(linear, left top, right top, from(rgba(150,150,150,0.2)), to(rgba(150,150,150,0)));
+        background: -moz-linear-gradient(left,  rgba(150,150,150,0.2),  rgba(150,150,150,0));
+    }
+
+
+/*
+#flip-right:hover #right1 {
+    -webkit-transform-origin: 200px 0;
+    -webkit-transform: translate(-864px, -534px) rotate(0deg);
+}
+#flip-right:hover #right2 > div {
+    -webkit-transform-origin: 200px 0;
+    -webkit-transform: translate(432px, 584px) rotate(0deg);
+}
+#flip-right:hover #right2 > div > div {
+    -webkit-transform-origin: 200px 0;
+    -webkit-transform: translate(0, 0) rotate(0deg);
+}
+
+
+#flip-left:hover #left1 {
+    -webkit-transform-origin: 648px 0;
+    -webkit-transform: translate(432px, -534px) rotate(0deg);
+}
+#flip-left:hover #left2 > div {
+    -webkit-transform-origin: 216px 0;
+    -webkit-transform: translate(0, 584px) rotate(0deg);
+}
+#flip-left:hover #left2 > div > div {
+    -webkit-transform-origin: 216px 0;
+    -webkit-transform: translate(0, 0) rotate(0deg);
+}
+*/

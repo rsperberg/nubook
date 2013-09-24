@@ -1,0 +1,140 @@
+/*------------------------------------------------------------------
+[CSS3 Stylesheet]
+
+Project: CSS3 Design Contest
+Last change: 19.06.2010 [updated stylesheet compatibility, pc]
+Designed by: Peter Craddock
+Works in browsers: FF 3.5+, Opera 10.5+, Safari 4+, Google Chrome 4.0+, IE 9+. Note: Opera & IE use a Javascript implementation of CSS3 multi-columns. See respective CSS files (multicolumn.css for Opera, ie_multicolumn.css for IE), which complement this stylesheet.
+-------------------------------------------------------------------*/
+
+html, body{
+    padding:0;
+    margin:0;
+}
+body {
+    font-family: Sabon,Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+    font-size: 90%;
+    min-width: 768px;
+}
+
+/* Layout */
+
+
+#containertwo {
+    width: 768px;
+    height: 924px;
+    margin:auto;
+    margin-top: 0;
+    clear:both;
+    display: block;
+    position: relative;
+}
+
+#subcontainertwo {
+    width: 768px;
+    height: 924px;
+    margin: 9px 0px 0 0px;
+    clear:both;
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+#articletwo {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    text-align: justify;
+    font-size: 1.0em;
+    line-height: 1.2em;
+    z-index: 10;
+    opacity: 1; /* for the animation */
+}
+/*    text-shadow:#EEE 1px 1px 1px;   *//* text shadow is a bonus, but it adds a more book-like feel to the serif typeface */
+
+
+.one {
+    height: 824px; /* height of the columns + padding-top */
+    width: 768px; /* width of the visible section of text (= two columns + 1 column gap) */
+    overflow: hidden; /* to prevent overflowing content from appearing */
+    margin: 0;
+}
+#contenttwo {
+    height: 824px; /* height of the columns + padding-top */
+}
+
+#columnisertwo {
+    height: 810px; /* - see above */
+    width: 758px; /* - see above */
+    overflow: visible;
+    /* this being the DIV we'll move on non-IE browsers, we want it to show all of its contents */
+    /* so when we slide it, the new columns will be visible */
+    margin-left: 6px;
+}
+
+
+
+/* Page turn section */
+
+
+#navtwo {
+    position: absolute;
+    height: 100px;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 10;
+    opacity: 1;
+    /* By setting 'overflow:hidden', we can hide any box-shadows that appear outside of the book */
+    /* Otherwise, they would increase the intensity of certain areas of the box-shadows surrounding the book */
+}
+
+.arrows {
+    list-style: none;
+    font-size: 1.3em;
+}
+    .arrows a {
+        display: block;
+        text-decoration: none;
+        overflow: hidden;
+        outline: none;
+        border: none;
+    }
+        .arrows a span {
+            display: block;
+            padding: 40px 0px 27px 0px;
+        }
+            .arrows #previoustwo a span {
+                padding-left: 35px;
+            }
+            .arrows #nexttwo a span {
+                padding-right: 35px;
+            }
+    .arrows li {
+        position: absolute;
+        display: block;
+    }
+    #previoustwo {
+        visibility: hidden; /* does not appear on the first page, later shows via Javascript */
+        left: 0;
+        text-align: left;
+    }
+    #nexttwo {
+        right: 0;
+        text-align: right;
+    }
+
+.two {
+    column-count: auto;
+    column-width: 758px;
+    column-gap: 20px;
+    -webkit-column-count: auto;
+    -webkit-column-width: 758px;
+    -webkit-column-gap: 20px;
+    height: 810px;
+    overflow: visible; /* necessary here */
+    display: block;
+    padding-left: 6px;
+    padding-top: 4px;
+}
+

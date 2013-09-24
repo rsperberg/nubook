@@ -1,0 +1,40 @@
+	div.one {
+		height: 924px;
+		/* height of the columns + padding-top  but minus the status bar*/
+		width: 758px;
+		/* width of the visible section of text */
+		overflow: hidden;
+		/* to prevent overflowing content from appearing */
+		margin: 0;
+	}
+	div#columniser {
+		height: 924px;
+		/* - see above */
+		width: 758px;
+		/* - see above */
+		overflow: visible;
+		/* this being the DIV we'll move on non-IE browsers, we want it to show all of its contents */
+		/* so when we slide it, the new columns will be visible */
+		margin: 0;
+		opacity: 1;
+		/* for the animation */
+	}
+	div.two {
+		column-count: auto;
+		column-width: 250px;
+		column-gap: 20px;
+		-webkit-column-count: auto;
+		-webkit-column-width: 250px;
+		-webkit-column-gap: 20px;
+		height: 924px;
+		overflow: visible;
+		/* necessary here */
+		display: block;
+		padding: 0;
+		padding-top: 4px;
+	}
+ /*   columnified is for IE  */
+	#columnified {
+		margin-left: 0;
+		width: auto;
+	}

@@ -1,0 +1,94 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>CSS3 Book - two-column multi-page book design (no images)</title>
+    <meta name="author" content="Peter Craddock" />
+
+    <script type="text/javascript" src="auxi/stylesheet.js"></script>
+    <style type="text/css"></style>
+    <link rel="stylesheet" type="text/css" href="auxi/book-stylesheet.css" media="screen, projection">
+</head>
+<body>
+    <!-- div id="container">
+        <div id="flip-left">
+            <div id="left1"><div id="left2"><div id="left3"><div id="left4"></div></div></div></div>
+        </div>
+        <div id="flip-right">
+            <div id="right1"><div id="right2"><div id="right3"><div id="right4"></div></div></div></div>
+        </div>
+        <div id="sublayout"><div class="pageseparator">&nbsp;</div></div>
+        <div id="subcontainer">
+        <div id="article">
+            <div class="one" id="content"  -->
+                <!--[if !IE]><!--><!--div id="columniser" style="margin-left: 0px;"  --><!--<![endif]-->
+                <!--  div id="columnified" class="two">
+                    <h2>CSS3 Book</h2>
+                    <p><em>Two-column, multi-page design emulating the behaviour of a book (without images)</em></p>
+                    <p>This design enables you to place any amount of content in the 'columnified' DIV of the layout, allowing for a site-wide flexible and fully customisable 'book-like' feel.</p>
+                    <p>It uses the CSS3 multi-column module for the multi-column layout (and a Javascript solution for Opera and IE, two browsers that, to date, do not support this module - this solution is a modified version of <a href="http://www.alistapart.com/articles/css3multicolumn/">Cédric Savarese's css3-multi-column.js</a>), and uses a combination of CSS shapes, border-radius, transforms, box-shadows and gradients to create the book appearance. Page turning is achieved via Javascript (pageturn.js). The different stylesheets are fed to browsers via Javascript as well, so as to detect whether the multi-columns are supported or not (stylesheet.js - basic browser detection only, on the assumption that Opera, Firefox, Safari and Chrome users update their browsers regularly).</p>
+                    <p>As no images have been used in this template, total customisation of the appearance is easily achieved (moreover, the CSS is annotated).</p>
+                    <p>For full explanations on the design and how to modify it, read <a href="http://www.arpia.be/2010/02/tutorial-multi-page-multi-column-web-pages/">this tutorial</a>.</p>
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div -->
+                <!--[if !IE]><!--><!--  /div  --><!--<![endif]-->
+            <!--  /div>
+        </div>
+        <div class="nav" id="nav">
+            <ul class="arrows">
+                <li id="previous"><a href="#" id="aprevious" onclick="changeColumns(1,'previous');return false;"><span>Previous page</span></a></li>
+                <li id="next"><a href="#" id="anext" onclick="changeColumns(-1,'next');return false;"><span>Next page</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div   -->
+
+<div id="containertwo">
+    <div id="subcontainertwo">
+        <div id="articletwo">
+            <div class="one" id="contenttwo">
+                <!--[if !IE]><!--><div id="columnisertwo" style="margin-left: 0px;"><!--<![endif]-->
+                <div id="columnifiedtwo" class="two">
+                    <h2>CSS3 Book</h2>
+                    <p><em>Two-column, multi-page design emulating the behaviour of a book (without images)</em></p>
+                    <p>This design enables you to place any amount of content in the 'columnified' DIV of the layout, allowing for a site-wide flexible and fully customisable 'book-like' feel.</p>
+                    <p>It uses the CSS3 multi-column module for the multi-column layout (and a Javascript solution for Opera and IE, two browsers that, to date, do not support this module - this solution is a modified version of <a href="http://www.alistapart.com/articles/css3multicolumn/">Cédric Savarese's css3-multi-column.js</a>), and uses a combination of CSS shapes, border-radius, transforms, box-shadows and gradients to create the book appearance. Page turning is achieved via Javascript (pageturn.js). The different stylesheets are fed to browsers via Javascript as well, so as to detect whether the multi-columns are supported or not (stylesheet.js - basic browser detection only, on the assumption that Opera, Firefox, Safari and Chrome users update their browsers regularly).</p>
+                    <p>As no images have been used in this template, total customisation of the appearance is easily achieved (moreover, the CSS is annotated).</p>
+                    <p>For full explanations on the design and how to modify it, read <a href="http://www.arpia.be/2010/02/tutorial-multi-page-multi-column-web-pages/">this tutorial</a>.</p>
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <!--[if !IE]><!--></div><!--<![endif]-->
+            </div>
+        </div>
+        <div class="nav" id="navtwo">
+            <ul class="arrows">
+                <li id="previoustwo"><a href="#navtwo" id="aprevioustwo" onclick="changeColumns2(1,'previous');return false;"><span>Previous page</span></a></li>
+                <li id="nexttwo"><a href="#navtwo" id="anexttwo" onclick="changeColumns2(-1,'next');return false;"><span>Next page</span></a></li>
+            </ul>
+        </div>
+    </div>  
+    </div>
+    <script type="text/javascript" src="auxi/pageturn.js"></script>
+
+</body>
+</html>

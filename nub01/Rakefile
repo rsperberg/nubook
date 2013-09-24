@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project/template/ios'
+
+begin
+  require 'bundler'
+  Bundler.require
+rescue LoadError
+end
+
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings.
+  app.name = 'nubook'
+  app.icons = ['s_icon_iphone.png','s_icon_iphone_retina.png', 's-bruno-ipad.png', 's-bruno-ipad-retina.png']
+  app.prerendered_icon = true
+  app.device_family = [:ipad]
+  app.identifier="ws.spress.nubook"
+  app.interface_orientations = [:portrait]
+  app.sdk_version="6.1"
+  app.deployment_target = "6.1"
+  app.detect_dependencies = false
+  app.version = "0.1"
+end
