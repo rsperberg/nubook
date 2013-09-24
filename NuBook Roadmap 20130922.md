@@ -10,14 +10,17 @@ NuBook road map
 
 0.2
 ----
-* Add swipe gestures to advance/go back
+* Expand tap on right side to go to next page from local area to half-page, ditto left side for previous page
+* Add swipe gestures to advance/go back by section
 * Use any font installed by default on iPad
-* Attempt Google Web font use
-* Can use personally installed font
+* Establish whether Google Web fonts can be used
+* Can use personally installed font on iPad
 * Include font in program that becomes available to user by CSS option
 
 0.3
 ----
+* Change text-size
+* Change font
 * Bookmark any spot and be able to revisit it
 * Highlight text
 * Be able to turn highlights off and back on
