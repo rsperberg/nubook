@@ -13,4 +13,4 @@ By the roadmap, the version is right at milestone 0.1.
 
 Screenshots of version 0.1 are posted. They show the first two pages of _Siddhartha_ by Hermann Hesse, text used from the FeedBooks version (and Feedbook cover used to demonstrate graphics capability), and show CSS-coded page controls to navigate to the next and previous pages. (Code by Paul Craddock — see multicolumn-book-example for more information.)
 
-
+Project does need to be renamed, since nubook is already used elsewhere.
